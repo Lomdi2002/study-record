@@ -30,8 +30,8 @@ jobs:
 
       # Firebase CLIをインストール
       - name: Install Firebase CLI
-        run: npm install -g firebase-tools
+        run: npm install -g firebase-tools@13.35.1
 
       # Firebaseへデプロイ
       - name: Deploy
-        run: firebase deploy --only hosting:study-record-940e0 --project study-record-940e0 --token "${{ secrets.FIREBASE_TOKEN }}"
+        run: firebase deploy --only hosting --project study-record-940e0 --token "${{ secrets.FIREBASE_TOKEN }}"

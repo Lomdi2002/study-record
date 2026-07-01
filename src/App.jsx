@@ -91,7 +91,7 @@ export const App = () => {
 
   return (
     <>
-      <h1>学習記録アプリ!</h1>
+      <h1>学習記録アプリ!!</h1>
 
       <StudyForm
         title={title}
