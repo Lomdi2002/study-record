@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "study-record-940e0",
     "public": "dist",
     "ignore": [
       "firebase.json",
