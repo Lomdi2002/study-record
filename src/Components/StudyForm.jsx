@@ -3,15 +3,15 @@ export const StudyForm = (props) => {
 
   return (
     <div>
-      <div>
+      <label>
         <p>学習内容</p>
         <input value={title} onChange={onChangeTitle} />
-      </div>
+      </label>
 
-      <div>
+      <label>
         <p>学習時間</p>
         <input value={time} onChange={onChangeTime} />
-      </div>
+      </label>
 
       <p>入力されている学習内容：{title}</p>
       <p>入力されている時間：{time}</p>

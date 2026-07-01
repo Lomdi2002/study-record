@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      #テスト
+      - name: Test
+        run: npm run test -- --run
+
       # Viteでビルド
       - name: Build
         run: npm run build
@@ -35,3 +39,4 @@ jobs:
       # Firebaseへデプロイ
       - name: Deploy
         run: firebase deploy --only hosting --project study-record-940e0 --token "${{ secrets.FIREBASE_TOKEN }}"
+
