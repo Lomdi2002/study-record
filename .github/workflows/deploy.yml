@@ -34,4 +34,4 @@ jobs:
 
       # Firebaseへデプロイ
       - name: Deploy
-        run: firebase deploy --project study-record-940e0 --token "${{ secrets.FIREBASE_TOKEN }}"
+        run: firebase deploy --only hosting --project study-record-940e0 --token "${{ secrets.FIREBASE_TOKEN }}"
