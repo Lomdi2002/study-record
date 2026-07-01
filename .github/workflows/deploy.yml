@@ -1,0 +1,37 @@
+name: Deploy to Firebase
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ソースコードを取得
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Node.jsをインストール
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # ライブラリをインストール
+      - name: Install dependencies
+        run: npm install
+
+      # Viteでビルド
+      - name: Build
+        run: npm run build
+
+      # Firebase CLIをインストール
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      # Firebaseへデプロイ
+      - name: Deploy
+        run: firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}"
